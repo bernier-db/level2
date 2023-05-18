@@ -60,7 +60,7 @@ Fill the form
     Input Text    id:address    ${address}
 
     Preview Robot
-    Wait Until Keyword Succeeds    3x    200ms    Submit Order
+    Wait Until Keyword Succeeds    5x    200ms    Submit Order
 
 Preview Robot
     Click Button    Preview
