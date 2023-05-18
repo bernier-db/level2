@@ -96,5 +96,4 @@ Start new order
     Click Button    Order another robot
 
 Create Zip of receipts
-    Archive Folder With Zip    ${OUTPUT_DIR}${/}receipts    receipts.zip
-    Move File    ${OUTPUT_DIR}${/}receipts.zip    ${OUTPUT_DIR}${/}output${/}receipts.zip    overwrite=true 
+    Archive Folder With Zip    ${OUTPUT_DIR}${/}receipts    ${OUTPUT_DIR}${/}receipts.zip

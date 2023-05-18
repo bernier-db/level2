@@ -1,52 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 5.0.1 (Python 3.9.13 on darwin)" generated="20230518 19:36:01.238" rpa="true" schemaversion="3">
+<robot generator="Robot 5.0.1 (Python 3.9.13 on darwin)" generated="20230518 19:46:21.651" rpa="true" schemaversion="3">
 <suite id="s1" name="Tasks" source="/Users/davebernier/Projects/robocorp-cert/level2/tasks.robot">
 <test id="s1-t1" name="Order robots from RobotSpareBin Industries Inc" line="23">
-<kw name="Open Website">
-<kw name="Open Available Browser" library="RPA.Browser.Selenium">
-<arg>${URL}</arg>
-<doc>Attempts to open a browser on the user's device from a set of
-supported browsers. Automatically downloads a corresponding webdriver
-if none is already installed.</doc>
-<msg timestamp="20230518 19:36:03.611" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
-<msg timestamp="20230518 19:36:03.613" level="INFO">Applicable driver not found; attempting to install with Selenium Manager (Beta)</msg>
-<msg timestamp="20230518 19:36:05.422" level="INFO">Created Chrome browser with arguments: --disable-dev-shm-usage --disable-web-security --allow-running-insecure-content --no-sandbox</msg>
-<msg timestamp="20230518 19:36:05.422" level="INFO" html="true">&lt;p&gt;Attempted combinations:&lt;/p&gt;&lt;div class="doc"&gt;&lt;table&gt;&lt;tr&gt;&lt;th&gt;Browser&lt;/th&gt;&lt;th&gt;Download&lt;/th&gt;&lt;th&gt;Error&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Chrome&lt;/td&gt;&lt;td&gt;False&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;</msg>
-<msg timestamp="20230518 19:36:05.423" level="INFO">Opening url 'https://robotsparebinindustries.com/#/robot-order'</msg>
-<status status="PASS" starttime="20230518 19:36:03.610" endtime="20230518 19:36:05.971"/>
-</kw>
-<status status="PASS" starttime="20230518 19:36:03.610" endtime="20230518 19:36:05.972"/>
-</kw>
 <kw name="Create Zip of receipts">
 <kw name="Archive Folder With Zip" library="RPA.Archive">
 <arg>${OUTPUT_DIR}${/}receipts</arg>
-<arg>receipts.zip</arg>
-<doc>Create a zip archive of a folder</doc>
-<status status="PASS" starttime="20230518 19:36:05.974" endtime="20230518 19:36:05.981"/>
-</kw>
-<kw name="Move File" library="RPA.FileSystem">
 <arg>${OUTPUT_DIR}${/}receipts.zip</arg>
-<arg>${OUTPUT_DIR}${/}output${/}receipts.zip</arg>
-<arg>overwrite=true</arg>
-<doc>Move a file from source path to destination path,
-optionally overwriting the destination.</doc>
-<msg timestamp="20230518 19:36:05.984" level="INFO">Moved file: /Users/davebernier/Projects/robocorp-cert/level2/receipts.zip -&gt; /Users/davebernier/Projects/robocorp-cert/level2/output/receipts.zip</msg>
-<status status="PASS" starttime="20230518 19:36:05.982" endtime="20230518 19:36:05.984"/>
+<doc>Create a zip archive of a folder</doc>
+<status status="PASS" starttime="20230518 19:46:24.036" endtime="20230518 19:46:24.043"/>
 </kw>
-<status status="PASS" starttime="20230518 19:36:05.973" endtime="20230518 19:36:05.984"/>
+<status status="PASS" starttime="20230518 19:46:24.035" endtime="20230518 19:46:24.043"/>
 </kw>
 <kw name="Close Browser" library="RPA.Browser.Selenium" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20230518 19:36:05.985" endtime="20230518 19:36:06.066"/>
+<status status="PASS" starttime="20230518 19:46:24.044" endtime="20230518 19:46:24.044"/>
 </kw>
-<status status="PASS" starttime="20230518 19:36:03.609" endtime="20230518 19:36:06.066"/>
+<status status="PASS" starttime="20230518 19:46:24.034" endtime="20230518 19:46:24.045"/>
 </test>
 <doc>Orders robots from RobotSpareBin Industries Inc.
 Saves the order HTML receipt as a PDF file.
 Saves the screenshot of the ordered robot.
 Embeds the screenshot of the robot to the PDF receipt.
 Creates ZIP archive of the receipts and the images.</doc>
-<status status="PASS" starttime="20230518 19:36:01.244" endtime="20230518 19:36:06.068"/>
+<status status="PASS" starttime="20230518 19:46:21.663" endtime="20230518 19:46:24.046"/>
 </suite>
 <statistics>
 <total>
